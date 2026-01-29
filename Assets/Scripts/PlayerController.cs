@@ -6,9 +6,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Rigidbody playerRb;
     [SerializeField] private float MAX_VELOCITY;
     [SerializeField] private float speed = 10;
+    
     private float velX = 0;
+    private float velY = 0;
     private float velZ = 0;
 
+    private float groundedRayDis = 1.1f;
 
     #region camera
 
@@ -43,18 +46,41 @@ public class PlayerController : MonoBehaviour
     }
     void FixedUpdate()
     {
+        ApplyVelocity();
+    }
 
+    void Move() 
+    { 
         float xAxis = Input.GetAxis("Horizontal");
         float zAxis = Input.GetAxis("Vertical");
 
-
         velZ = Mathf.Clamp(zAxis * speed, -MAX_VELOCITY, MAX_VELOCITY);
         velX = Mathf.Clamp(xAxis * speed, -MAX_VELOCITY, MAX_VELOCITY);
-
-
-        playerRb.linearVelocity = transform.right * velX + transform.forward * velZ;
-
     }
 
+    void Jump() 
+    {
+        bool jumpInput = Input.GetButton("Jump");
+        bool isGrounded = Physics.Raycast(transform.position, Vector3.down, groundedRayDis);
+        Debug.Log(isGrounded);
+        if(jumpInput && isGrounded) 
+        {
+            velY = 10;
+        }
+        else if(!isGrounded)
+        {
+            velY = -9; 
+        }
+        else 
+        {
+            velY = 0;
+        }
+    }
 
+    void ApplyVelocity() 
+    {
+        Move();
+        Jump();
+        playerRb.linearVelocity = transform.right * velX + transform.forward * velZ + transform.up * velY;
+    }
 }
