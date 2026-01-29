@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class MaskVision : MonoBehaviour
 {
-    [SerializeField]
-    bool[] Masks;
+    [SerializeField] bool[] Masks;
     [SerializeField] float dist;
     
 
