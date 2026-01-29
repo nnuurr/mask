@@ -1,11 +1,12 @@
+using System;
 using UnityEngine;
 
 public class MaskVision : MonoBehaviour
 {
     [SerializeField]
+    bool[] Masks = new bool[5];
     
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         
