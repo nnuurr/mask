@@ -308,6 +308,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!4 &1285918225 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8112418532228545737, guid: 35623dc3a7cc13948990522765ad018a, type: 3}
+  m_PrefabInstance: {fileID: 4760585624191666451}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4760585624191666451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -360,6 +365,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5131240213839095135, guid: 35623dc3a7cc13948990522765ad018a, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 1285918225}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
