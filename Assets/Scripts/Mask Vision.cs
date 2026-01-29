@@ -4,13 +4,13 @@ using UnityEngine;
 public class MaskVision : MonoBehaviour
 {
     [SerializeField]
-    bool[] Masks = new bool[5];
+    bool[] Masks;
     [SerializeField] float dist;
     
 
     void Start()
     {
-        
+        Masks = new bool[5];
     }
 
     // Update is called once per frame
