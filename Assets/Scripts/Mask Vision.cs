@@ -5,6 +5,7 @@ public class MaskVision : MonoBehaviour
 {
     [SerializeField]
     bool[] Masks = new bool[5];
+    [SerializeField] float dist;
     
 
     void Start()
@@ -13,8 +14,13 @@ public class MaskVision : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        RaycastHit hit;
+        if(Physics.Raycast(transform.position, transform.forward, out hit, dist))
+        {
+            Debug.Log("h");
+        }
+
     }
 }
