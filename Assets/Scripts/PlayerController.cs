@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private float velY = 0;
     private float velZ = 0;
 
-    private const float MAX_JUMP_TIME = 0.3f;
+    private const float MAX_JUMP_TIME = 0.1f;
     private float jTimeModifier = 2;
     private float jumpTime = MAX_JUMP_TIME;
     private float jumpForce = 10;
@@ -29,7 +29,6 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
-
 
     private void OnMouse()
     {
@@ -64,7 +63,7 @@ public class PlayerController : MonoBehaviour
     void Jump() 
     {
         bool jumpInput = Input.GetButton("Jump");
-        bool isGrounded = Physics.Raycast(transform.position, Vector3.down, groundedRayDis);
+        bool isGrounded = Physics.BoxCast(transform.position, new Vector3(0.32f, 0.64f, 0.32f), Vector3.down, Quaternion.Euler(Vector3.zero), groundedRayDis);
         Debug.Log(isGrounded);
         if(jumpInput) 
         {
@@ -73,7 +72,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (jumpTime > 0 && velY != 0)
         { 
-            velY = jumpForce/2;
+            velY = jumpForce / 2;
             jTimeModifier = 2;
         }
 
