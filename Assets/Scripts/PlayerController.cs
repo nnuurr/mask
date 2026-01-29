@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     private float jTimeModifier = 2;
     private float jumpTime = MAX_JUMP_TIME;
     private float jumpForce = 10;
-    private float groundedRayDis = 1.1f;
+    private float groundedRayDis = 0.3f;
 
     #region camera
 
@@ -60,11 +60,12 @@ public class PlayerController : MonoBehaviour
         velX = Mathf.Clamp(xAxis * speed, -MAX_VELOCITY, MAX_VELOCITY);
     }
 
+
     void Jump() 
     {
         bool jumpInput = Input.GetButton("Jump");
         bool isGrounded = Physics.BoxCast(transform.position, new Vector3(0.32f, 0.64f, 0.32f), Vector3.down, Quaternion.Euler(Vector3.zero), groundedRayDis);
-        Debug.Log(isGrounded);
+        
         if(jumpInput) 
         {
             velY = jumpForce;
