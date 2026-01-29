@@ -49,7 +49,6 @@ public class PlayerController : MonoBehaviour
 
 
         playerRb.linearVelocity = new Vector3(velX, 0, velZ);
-
     }
 
 

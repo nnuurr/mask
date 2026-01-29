@@ -232,7 +232,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -251,12 +251,11 @@ MonoBehaviour:
   playerRb: {fileID: 5256847379689926920}
   MAX_VELOCITY: 5
   speed: 10
-  MouseX: 0
-  MouseY: 0
-  camera: {fileID: 8409439105144185888}
+  camera: {fileID: 8112418532228545737}
+  xRotate: 0
   MaxTurn: 90
   MinTurn: -90
-  Rotate: 5
+  mouseSens: 100
 --- !u!114 &3862805007733103372
 MonoBehaviour:
   m_ObjectHideFlags: 0
