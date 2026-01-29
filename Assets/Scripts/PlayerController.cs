@@ -10,10 +10,9 @@ public class PlayerController : MonoBehaviour
     private float velZ = 0;
 
 
-    #region
-    public float MouseX, MouseY ;
+    #region camera
 
-    public GameObject camera ;
+    public Transform camera;
     public float xRotate = 0f, MaxTurn = 90f, MinTurn = -90f, mouseSens = 100f;
     #endregion
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -34,19 +33,12 @@ public class PlayerController : MonoBehaviour
         xRotate -= y;
         xRotate = Mathf.Clamp(xRotate, MinTurn, MaxTurn);
 
-        camera.transform.rotation = Quaternion.Euler(xRotate, MinTurn, MaxTurn);
-        transform.Rotate(Vector3.up * MouseX);
+        camera.localRotation = Quaternion.Euler(xRotate, MinTurn, MaxTurn);
 
-        camera.transform.rotation = Quaternion.Euler(xRotate, MinTurn, MaxTurn);
-        transform.Rotate(Vector3.up * MouseX);
-    }
-    private void Update()
-    {
-        OnMouse();
+        transform.Rotate(Vector3.up * x);
     }
     void FixedUpdate()
     {
-
 
         float xAxis = Input.GetAxis("Horizontal");
         float zAxis = Input.GetAxis("Vertical");
