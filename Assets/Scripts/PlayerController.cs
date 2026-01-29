@@ -1,3 +1,4 @@
+using System.Collections;
 using System.IO;
 using UnityEngine;
 
@@ -11,6 +12,10 @@ public class PlayerController : MonoBehaviour
     private float velY = 0;
     private float velZ = 0;
 
+    private const float MAX_JUMP_TIME = 0.3f;
+    private float jTimeModifier = 2;
+    private float jumpTime = MAX_JUMP_TIME;
+    private float jumpForce = 10;
     private float groundedRayDis = 1.1f;
 
     #region camera
@@ -21,7 +26,6 @@ public class PlayerController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -29,7 +33,6 @@ public class PlayerController : MonoBehaviour
 
     private void OnMouse()
     {
-
         float x = Input.GetAxis("Mouse X") * mouseSens;
         float y = Input.GetAxis("Mouse Y") * mouseSens;
 
@@ -63,17 +66,29 @@ public class PlayerController : MonoBehaviour
         bool jumpInput = Input.GetButton("Jump");
         bool isGrounded = Physics.Raycast(transform.position, Vector3.down, groundedRayDis);
         Debug.Log(isGrounded);
-        if(jumpInput && isGrounded) 
+        if(jumpInput) 
         {
-            velY = 10;
+            velY = jumpForce;
+            jTimeModifier = 1;
         }
-        else if(!isGrounded)
+        else if (jumpTime > 0 && velY != 0)
+        { 
+            velY = jumpForce/2;
+            jTimeModifier = 2;
+        }
+
+        if(velY > 0f && jumpTime > 0) 
         {
-            velY = -9; 
+            jumpTime -= Time.deltaTime * jTimeModifier;
+        }
+        else if (!isGrounded) 
+        {
+            velY = -jumpForce;
         }
         else 
         {
-            velY = 0;
+            velY = 0f;
+            jumpTime = MAX_JUMP_TIME;
         }
     }
 
