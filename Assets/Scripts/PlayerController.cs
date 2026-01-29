@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     #region camera
 
     public Transform camera;
-    public float xRotate = 0f, MaxTurn = 90f, MinTurn = -90f, mouseSens = 100f;
+    public float xRotate = 0f, MaxTurn = 90f, MinTurn = -90f, mouseSens = 5f;
     #endregion
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,15 +27,19 @@ public class PlayerController : MonoBehaviour
     private void OnMouse()
     {
 
-        float x = Input.GetAxis("Mouse X") * mouseSens * Time.deltaTime;
-        float y = Input.GetAxis("Mouse Y") * mouseSens * Time.deltaTime;
+        float x = Input.GetAxis("Mouse X") * mouseSens;
+        float y = Input.GetAxis("Mouse Y") * mouseSens;
 
         xRotate -= y;
         xRotate = Mathf.Clamp(xRotate, MinTurn, MaxTurn);
 
-        camera.localRotation = Quaternion.Euler(xRotate, MinTurn, MaxTurn);
+        camera.localRotation = Quaternion.Euler(xRotate, 0f, 0f);
 
         transform.Rotate(Vector3.up * x);
+    }
+    void Update() 
+    {
+        OnMouse();
     }
     void FixedUpdate()
     {
@@ -48,7 +52,8 @@ public class PlayerController : MonoBehaviour
         velX = Mathf.Clamp(xAxis * speed, -MAX_VELOCITY, MAX_VELOCITY);
 
 
-        playerRb.linearVelocity = new Vector3(velX, 0, velZ);
+        playerRb.linearVelocity = transform.right * velX + transform.forward * velZ;
+
     }
 
 
