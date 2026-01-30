@@ -1,13 +1,12 @@
 using UnityEngine;
 
 public class EyeLook : MonoBehaviour
-{
+{    
+    private Transform lookTrans;
     [SerializeField] private Transform playerTrans;
-    [SerializeField] private Transform lookTrans;
     [SerializeField] private ClickableButtonsManager bManager;
     [SerializeField] private Transform[] butTrans;
     [SerializeField] private SecondMask secondMask;
-    int currentBot = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
