@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class ShatterMirror : MonoBehaviour
 {
-    private GameObject glass;
+    [SerializeField] private GameObject glass;
+    [SerializeField] private Draggable draggable;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,5 +15,14 @@ public class ShatterMirror : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.CompareTag("Throwable") && !draggable.IsDragging())
+        {
+            glass.SetActive(true);
+            gameObject.SetActive(false);
+        }
     }
 }
