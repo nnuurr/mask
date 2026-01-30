@@ -25,8 +25,8 @@ public class Draggable : Clickable
 
     [Header("Placement Validation")]
     public LayerMask invalidLayers;   // Layers the object cannot overlap
-    public float checkRadius = 0.5f;  // Size of overlap check
     private bool isValid = true;
+    public float sensorDistance = 50f;
 
     void Awake()
     {
@@ -57,6 +57,43 @@ public class Draggable : Clickable
 
         handAnim.SetBool("Hold", isDragging);
 
+    }
+
+    public bool IsDragging()
+    {
+        return isDragging;
+    }
+
+    bool CheckPlacementValid()
+    {
+        BoxCollider box = col as BoxCollider;
+        if (box == null)
+            return true;
+
+        // Calculate world-space box from local BoxCollider data
+        Vector3 center = transform.TransformPoint(box.center);
+
+        Vector3 halfExtents = Vector3.Scale(
+            box.size * 0.5f,
+            transform.lossyScale
+        );
+
+        Collider[] hits = Physics.OverlapBox(
+            center,
+            halfExtents,
+            transform.rotation,
+            invalidLayers,
+            QueryTriggerInteraction.Ignore
+        );
+
+        // Ignore self just in case
+        foreach (var hit in hits)
+        {
+            if (hit != col)
+                return false;
+        }
+
+        return true;
     }
 
     public override void OnMouseDown()
@@ -92,7 +129,7 @@ public class Draggable : Clickable
         transform.position = curPosition;
 
         // Validate placement
-        isValid = !Physics.CheckSphere(transform.position, checkRadius, invalidLayers);
+        isValid = CheckPlacementValid();
 
         if (isValid)
             SetColor(new Color(originalColor.r, originalColor.g, originalColor.b, 0.5f));
@@ -114,7 +151,19 @@ public class Draggable : Clickable
 
         // Snap back if invalid
         if (!isValid)
+        {
             transform.position = originalPosition;
+        }
+        else
+        {
+            // Check if placed on WeightSensor
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, Vector3.down, out hit, sensorDistance))
+            {
+                if (hit.collider.GetComponent<WeightSensor>() != null)
+                    hit.collider.GetComponent<WeightSensor>().ActivateSensor(this);
+            }
+        }
 
         // Restore original color
         SetColor(originalColor);
