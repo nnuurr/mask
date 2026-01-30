@@ -20,6 +20,8 @@ public class Draggable : Clickable
     private Material draggingMaterialFine;
     [SerializeField]
     private Material draggingMaterialBad;
+    [SerializeField]
+    private Animator handAnim;
 
     [Header("Placement Validation")]
     public LayerMask invalidLayers;   // Layers the object cannot overlap
@@ -52,6 +54,9 @@ public class Draggable : Clickable
         {
             rend.material = originalMaterial;
         }
+
+        handAnim.SetBool("Hold", isDragging);
+
     }
 
     public override void OnMouseDown()
