@@ -115,9 +115,6 @@ public class Draggable : Clickable
         // Disable collisions
         col.enabled = false;
 
-        // Make semi-transparent
-        SetColor(new Color(originalColor.r, originalColor.g, originalColor.b, 0.5f));
-
         isDragging = true;
     }
 
@@ -135,9 +132,9 @@ public class Draggable : Clickable
         isValid = CheckPlacementValid();
 
         if (isValid)
-            SetColor(new Color(originalColor.r, originalColor.g, originalColor.b, 0.5f));
+            rend.material = draggingMaterialFine;
         else
-            SetColor(Color.red);
+            rend.material = draggingMaterialBad;
     }
 
     void OnMouseUp()
@@ -169,11 +166,6 @@ public class Draggable : Clickable
         }
 
         // Restore original color
-        SetColor(originalColor);
-    }
-
-    private void SetColor(Color c)
-    {
-        rend.material.color = c;
+        rend.material = originalMaterial;
     }
 }
