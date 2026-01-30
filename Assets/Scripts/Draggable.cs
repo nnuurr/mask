@@ -20,7 +20,6 @@ public class Draggable : Clickable
     private Material draggingMaterialFine;
     [SerializeField]
     private Material draggingMaterialBad;
-    [SerializeField]
     private Animator handAnim;
 
     [Header("Placement Validation")]
@@ -39,6 +38,8 @@ public class Draggable : Clickable
         col = GetComponent<Collider>();
 
         originalMaterial = rend.material;
+
+        handAnim = GameObject.FindGameObjectWithTag("rightHand").GetComponent<Animator>();
     }
 
     private void Update()
