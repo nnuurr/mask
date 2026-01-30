@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 screenPos = new Vector2(Screen.width / 2, Screen.height / 2); 
         Ray ray = Camera.main.ScreenPointToRay(screenPos); 
-        if (Physics.Raycast(ray, out RaycastHit hit, 100f)) 
+        if (Physics.Raycast(ray, out RaycastHit hit, 2f)) 
         { 
             Clickable clickable = hit.collider.GetComponent<Clickable>(); 
             if (clickable != null) 
