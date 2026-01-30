@@ -22,4 +22,9 @@ public class ThirdMask : MonoBehaviour
         if (postProcessVolume!=null) postProcessVolume.enabled = state;
         IsActive = state;
     }
+
+    public bool GetIsActive()
+    {
+        return IsActive;
+    }
 }

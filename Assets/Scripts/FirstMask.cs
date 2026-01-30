@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
@@ -21,5 +22,10 @@ public class FirstMask : MonoBehaviour
     {
         if (postProcessVolume != null) postProcessVolume.enabled = state;
         IsActive = state;
+    }
+
+    public bool GetIsActive()
+    {
+        return IsActive;
     }
 }
