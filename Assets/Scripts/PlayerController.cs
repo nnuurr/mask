@@ -12,10 +12,7 @@ public class PlayerController : MonoBehaviour
     private float velY = 0;
     private float velZ = 0;
 
-    private const float MAX_JUMP_TIME = 0.1f;
-    private float jTimeModifier = 2;
-    private float jumpTime = MAX_JUMP_TIME;
-    private float jumpForce = 10;
+    private float jumpForce = 500;
     private float groundedRayDis = 0.3f;
 
     #region camera
@@ -65,30 +62,9 @@ public class PlayerController : MonoBehaviour
     {
         bool jumpInput = Input.GetButton("Jump");
         bool isGrounded = Physics.BoxCast(transform.position, new Vector3(0.32f, 0.64f, 0.32f), Vector3.down, Quaternion.Euler(Vector3.zero), groundedRayDis);
-        
-        if(jumpInput) 
+        if(jumpInput && isGrounded)
         {
-            velY = jumpForce;
-            jTimeModifier = 1;
-        }
-        else if (jumpTime > 0 && velY != 0)
-        { 
-            velY = jumpForce / 2;
-            jTimeModifier = 2;
-        }
-
-        if(velY > 0f && jumpTime > 0) 
-        {
-            jumpTime -= Time.deltaTime * jTimeModifier;
-        }
-        else if (!isGrounded) 
-        {
-            velY = -jumpForce;
-        }
-        else 
-        {
-            velY = 0f;
-            jumpTime = MAX_JUMP_TIME;
+            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
     }
 
@@ -96,6 +72,6 @@ public class PlayerController : MonoBehaviour
     {
         Move();
         Jump();
-        playerRb.linearVelocity = transform.right * velX + transform.forward * velZ + transform.up * velY;
+        playerRb.linearVelocity = transform.right * velX + transform.forward * velZ + Vector3.up * playerRb.linearVelocity.y;
     }
 }
