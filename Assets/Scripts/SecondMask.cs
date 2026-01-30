@@ -20,8 +20,8 @@ public class SecondMask : MonoBehaviour
 
     public void Activate(bool state)
     {
-        localLightSource.enabled = state;
-        directionalSource.enabled = !state;
+        if (localLightSource != null) localLightSource.enabled = state;
+        if (directionalSource != null) directionalSource.enabled = !state;
         IsActive = state;
     }
 }

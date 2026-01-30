@@ -19,17 +19,18 @@ public class CursorControl : MonoBehaviour
         image = GetComponent<Image>();
     }
 
-    public void SetCursorTo(int objectType)
+    public void SetCursorTo(ClickableType objectType)
     {
         switch (objectType)
         {
-            case 0:
+            case ClickableType.None:
                 image.sprite = defaultCursor;
                 image.transform.localPosition = new Vector3(0.0f,
                                              0.0f,
                                              0.0f);
                 break;
-            case 1:
+            case ClickableType.Interactable:
+            case ClickableType.Draggable:
                 image.sprite = interactableCursor;
                 image.transform.localPosition = new Vector3(offsetForNonDefaultCursor.x,
                                              offsetForNonDefaultCursor.y,
