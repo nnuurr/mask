@@ -20,6 +20,14 @@ public class MaskVision : MonoBehaviour
         {
             Debug.Log("h");
         }
+    }
 
+    void UpdateMaskState(int maskId, bool state)
+    {
+        Masks[maskId] = state;
+        foreach (var visionDependant in FindObjectsByType<VisionDependant>(FindObjectsSortMode.None))
+        {
+            visionDependant.AdjustVisibility(maskId, state);
+        }
     }
 }
