@@ -1,0 +1,27 @@
+using UnityEngine;
+
+public class SecondMask : MonoBehaviour
+{
+    [SerializeField]
+    private Light localLightSource;
+    [SerializeField]
+    private Light directionalSource;
+
+    [SerializeField]
+    private bool IsActive = false;
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            Activate(!IsActive);
+        }
+    }
+
+    public void Activate(bool state)
+    {
+        localLightSource.enabled = state;
+        directionalSource.enabled = !state;
+        IsActive = state;
+    }
+}
