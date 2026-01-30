@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed = 10;
     
     private float velX = 0;
-    private float velY = 0;
     private float velZ = 0;
 
     private float jumpForce = 500;

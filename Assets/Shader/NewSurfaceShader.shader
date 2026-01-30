@@ -1,4 +1,4 @@
-Shader "Custom/LitCircularVignetteGradientNoise"
+Shader "Custom/LitCircularVignetteGradientNoise_Transparent"
 {
     Properties
     {
@@ -15,11 +15,17 @@ Shader "Custom/LitCircularVignetteGradientNoise"
 
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
+        Tags 
+        { 
+            "Queue"="Transparent"
+            "RenderType"="Transparent"
+        }
+
         LOD 200
+        Blend SrcAlpha OneMinusSrcAlpha
 
         CGPROGRAM
-        #pragma surface surf Standard fullforwardshadows
+        #pragma surface surf Standard fullforwardshadows alpha:fade
 
         sampler2D _MainTex;
         float4 _Color;
@@ -86,22 +92,24 @@ Shader "Custom/LitCircularVignetteGradientNoise"
             // --- PROCEDURAL GRADIENT NOISE ---
             float n = gradientNoise(uv * _NoiseScale);
 
-            // Normalize noise from [-1,1] to [0,1]
+            // Normalize [-1,1] → [0,1]
             n = n * 0.5 + 0.5;
 
-            // Blend noise into vignette
-            vignette *= lerp(1.0, n, _NoiseStrength);
+            // Noise controls transparency:
+            // 1 = fully visible, 0 = fully invisible
+            float noiseAlpha = lerp(1.0, 0.0, n * _NoiseStrength);
 
-            // Apply intensity
-            float finalVignette = lerp(1.0, 1.0 - vignette, _VignetteIntensity);
+            // Combine vignette + noise
+            float finalAlpha = (1.0 - vignette) * noiseAlpha;
 
-            c.rgb *= finalVignette;
+            // Apply alpha
+            o.Alpha = finalAlpha;
 
+            // RGB stays normal
             o.Albedo = c.rgb;
-            o.Alpha = c.a;
         }
         ENDCG
     }
 
-    FallBack "Diffuse"
+    FallBack "Transparent/Diffuse"
 }
