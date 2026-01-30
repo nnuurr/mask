@@ -14,7 +14,7 @@ public class Clickable : MonoBehaviour
         clickableType = ClickableType.Interactable;
     }
 
-    public virtual void OnMouseDown()
+    public virtual void Clicked()
     {
         Debug.Log("Clickable object was clicked!");
         clickCounter++;

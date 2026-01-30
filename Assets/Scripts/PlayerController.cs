@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     private CursorControl cursorControl;
+    private Clickable possibleClickable;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -42,6 +43,14 @@ public class PlayerController : MonoBehaviour
         camera.localRotation = Quaternion.Euler(xRotate, 0f, 0f);
 
         transform.Rotate(Vector3.up * x);
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            if (possibleClickable != null)
+            {
+                possibleClickable.Clicked();
+            }
+        }
     }
     void Update() 
     {
@@ -58,16 +67,19 @@ public class PlayerController : MonoBehaviour
             Clickable clickable = hit.collider.GetComponent<Clickable>(); 
             if (clickable != null) 
             {
-                cursorControl.SetCursorTo(1);
+                cursorControl.SetCursorTo(clickable.GetClickableType());
+                possibleClickable = clickable;
             }
             else
             {
-                cursorControl.SetCursorTo(0);
+                cursorControl.SetCursorTo(ClickableType.None);
+                possibleClickable = null;
             }
         }
         else 
         {
-            cursorControl.SetCursorTo(0);
+            cursorControl.SetCursorTo(ClickableType.None);
+            possibleClickable = null;
         }
     }
 

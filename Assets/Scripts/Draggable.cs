@@ -96,7 +96,7 @@ public class Draggable : Clickable
         return true;
     }
 
-    public override void OnMouseDown()
+    public override void Clicked()
     {
         originalPosition = transform.position;
 

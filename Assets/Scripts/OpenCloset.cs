@@ -38,7 +38,7 @@ public class OpenCloset : Clickable
         }
     }
 
-    public override void OnMouseDown()
+    public override void Clicked()
     {
         isOpening = true;
     }
