@@ -1,29 +1,46 @@
 using UnityEngine;
 
-public class OpenCloset : MonoBehaviour
+public class OpenCloset : Clickable
 {
     private const int openCloset = 130;
     private const int closeCloset = 0;
     [SerializeField] private Transform leftDoor;
     [SerializeField] private Transform rightDoor;
+    private Quaternion leftDoorStart;
+    private Quaternion rightDoorStart;
+    private Quaternion leftDoorOpen;
+    private Quaternion rightDoorOpen;
+
+    private bool isOpening = false;
+    public float duration = 1.5f;
+    private float time = 0.0f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
-        
+        clickableType = ClickableType.Interactable;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        if(Input.GetKey(KeyCode.E))
+        leftDoorStart = leftDoor.localRotation;
+        rightDoorStart = rightDoor.localRotation;
+        leftDoorOpen = Quaternion.Euler(0, openCloset, 0);
+        rightDoorOpen = Quaternion.Euler(0, -openCloset, 0);
+    }
+
+    private void FixedUpdate()
+    {
+        if (isOpening && time < duration)
         {
-            open();
+            leftDoor.localRotation = Quaternion.Lerp(leftDoorStart, leftDoorOpen, time / duration);
+            rightDoor.localRotation = Quaternion.Lerp(rightDoorStart, rightDoorOpen, time / duration);
+            time += Time.deltaTime;
         }
     }
 
-    private void open()
+    public override void OnMouseDown()
     {
-        leftDoor.localRotation = Quaternion.Euler(0,openCloset,0);
-        rightDoor.localRotation = Quaternion.Euler(0,-openCloset,0);
+        isOpening = true;
     }
 }
