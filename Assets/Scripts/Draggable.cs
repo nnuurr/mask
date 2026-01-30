@@ -45,6 +45,7 @@ public class Draggable : Clickable
     {
         if (isDragging)
         {
+            handAnim.SetBool("Hold", true);
             if (isValid)
                 rend.material = (draggingMaterialFine != null) ? draggingMaterialFine : originalMaterial;
             else
@@ -55,8 +56,10 @@ public class Draggable : Clickable
             rend.material = originalMaterial;
         }
 
-        handAnim.SetBool("Hold", isDragging);
-
+        if(Input.GetMouseButtonUp(0))
+        {
+            handAnim.SetBool("Hold", false);
+        }
     }
 
     public bool IsDragging()

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OpeningTransition : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class OpeningTransition : MonoBehaviour
 
         if (whitePanel.alpha >= 1)
         {
-            
+            SceneManager.LoadScene(1);
         }
     }
 }
