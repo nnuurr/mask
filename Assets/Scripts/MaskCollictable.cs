@@ -18,9 +18,9 @@ public class MaskCollictable : MonoBehaviour
     {
         drag = GetComponent<Draggable>();
 
-        fMask = GameObject.FindGameObjectWithTag("Player").GetComponent<FirstMask>();
-        sMask = GameObject.FindGameObjectWithTag("Player").GetComponent<SecondMask>();
-        tMask = GameObject.FindGameObjectWithTag("Player").GetComponent<ThirdMask>();
+        fMask = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<FirstMask>();
+        sMask = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<SecondMask>();
+        tMask = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<ThirdMask>();
     }
 
     // Update is called once per frame

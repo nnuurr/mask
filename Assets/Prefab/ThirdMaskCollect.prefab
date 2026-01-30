@@ -146,6 +146,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MaskCollictable
   maskNumber: 3
   Masks:
-  - {fileID: 8067413026022450146}
+  - {fileID: 5668779672450535690, guid: f4a3b57dfa0afc649ab36b43a231b0b4, type: 3}
   - {fileID: 8044550915793523855, guid: cbe49e51b23d50143aaf0e1c11eece46, type: 3}
   - {fileID: 8067413026022450146}

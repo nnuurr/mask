@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2940257645574498420}
   - component: {fileID: 7709453547927028454}
   m_Layer: 0
-  m_Name: FirstMask
+  m_Name: FirstMaskCollect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
