@@ -1,76 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8196186790240528143
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6050e2d5de785ce4d931e4dbdbf2d755, type: 3}
-  m_Name: ChromaticAberration
-  m_EditorClassIdentifier: Unity.Postprocessing.Runtime::UnityEngine.Rendering.PostProcessing.ChromaticAberration
-  active: 1
-  enabled:
-    overrideState: 1
-    value: 1
-  spectralLut:
-    overrideState: 1
-    value: {fileID: 0}
-    defaultState: 1
-  intensity:
-    overrideState: 1
-    value: 0.817
-  fastMode:
-    overrideState: 1
-    value: 0
---- !u!114 &-7092097484757478399
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40b924e2dad56384a8df2a1e111bb675, type: 3}
-  m_Name: Vignette
-  m_EditorClassIdentifier: Unity.Postprocessing.Runtime::UnityEngine.Rendering.PostProcessing.Vignette
-  active: 1
-  enabled:
-    overrideState: 1
-    value: 1
-  mode:
-    overrideState: 1
-    value: 0
-  color:
-    overrideState: 1
-    value: {r: 0.5345911, g: 0.20677574, b: 0.48565963, a: 1}
-  center:
-    overrideState: 1
-    value: {x: 0.5, y: 0.5}
-  intensity:
-    overrideState: 1
-    value: 0.322
-  smoothness:
-    overrideState: 1
-    value: 0.2
-  roundness:
-    overrideState: 1
-    value: 1
-  rounded:
-    overrideState: 1
-    value: 1
-  mask:
-    overrideState: 0
-    value: {fileID: 0}
-    defaultState: 1
-  opacity:
-    overrideState: 0
-    value: 1
---- !u!114 &-4991082250261219322
+--- !u!114 &-3224329149077215152
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -88,28 +18,28 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 18.57
+    value: 28.27
   threshold:
     overrideState: 1
-    value: 1
+    value: 0.99
   softKnee:
     overrideState: 1
-    value: 0.689
+    value: 0.611
   clamp:
     overrideState: 1
-    value: 65555
+    value: 65472
   diffusion:
     overrideState: 1
-    value: 7.31
+    value: 7
   anamorphicRatio:
     overrideState: 1
-    value: -0.27
+    value: -0.49
   color:
     overrideState: 1
-    value: {r: 1, g: 1, b: 1, a: 1}
+    value: {r: 0.0756495, g: 0.7789207, b: 0.9622642, a: 1}
   fastMode:
     overrideState: 1
-    value: 1
+    value: 0
   dirtTexture:
     overrideState: 1
     value: {fileID: 0}
@@ -117,7 +47,7 @@ MonoBehaviour:
   dirtIntensity:
     overrideState: 1
     value: 0
---- !u!114 &-3909321526228303296
+--- !u!114 &-2826022796063918098
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,13 +65,13 @@ MonoBehaviour:
     value: 1
   mode:
     overrideState: 1
-    value: 1
+    value: 0
   intensity:
     overrideState: 1
-    value: 1.34
+    value: 0.64
   color:
     overrideState: 1
-    value: {r: 1, g: 0.31132066, b: 1, a: 1}
+    value: {r: 0.039001577, g: 0.42767292, b: 0.1669547, a: 1}
   ambientOnly:
     overrideState: 1
     value: 1
@@ -156,10 +86,10 @@ MonoBehaviour:
     value: -12
   thicknessModifier:
     overrideState: 1
-    value: 1.63
+    value: 1
   zBias:
     overrideState: 1
-    value: 0.000101
+    value: 0.0001
   directLightingStrength:
     overrideState: 0
     value: 0
@@ -169,40 +99,6 @@ MonoBehaviour:
   quality:
     overrideState: 0
     value: 2
---- !u!114 &-691229295995200703
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b77c5407dc277943b591ade9e6b18c5, type: 3}
-  m_Name: LensDistortion
-  m_EditorClassIdentifier: Unity.Postprocessing.Runtime::UnityEngine.Rendering.PostProcessing.LensDistortion
-  active: 1
-  enabled:
-    overrideState: 1
-    value: 1
-  intensity:
-    overrideState: 1
-    value: -62
-  intensityX:
-    overrideState: 1
-    value: 0.726
-  intensityY:
-    overrideState: 1
-    value: 0.738
-  centerX:
-    overrideState: 1
-    value: 0.22
-  centerY:
-    overrideState: 1
-    value: 0.05
-  scale:
-    overrideState: 1
-    value: 0.94
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,18 +109,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
-  m_Name: Post-process Volume Profile
+  m_Name: ThirdMaskEffectsVolume Profile
   m_EditorClassIdentifier: Unity.Postprocessing.Runtime::UnityEngine.Rendering.PostProcessing.PostProcessProfile
   settings:
-  - {fileID: -691229295995200703}
-  - {fileID: -8196186790240528143}
-  - {fileID: 6307279408373825655}
-  - {fileID: -4991082250261219322}
-  - {fileID: -7092097484757478399}
-  - {fileID: 2208740841110973626}
-  - {fileID: 806225402782172250}
-  - {fileID: -3909321526228303296}
---- !u!114 &806225402782172250
+  - {fileID: -3224329149077215152}
+  - {fileID: 4847711232211572830}
+  - {fileID: 455774233920224472}
+  - {fileID: -2826022796063918098}
+--- !u!114 &455774233920224472
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -241,7 +133,7 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   gradingMode:
-    overrideState: 0
+    overrideState: 1
     value: 1
   externalLut:
     overrideState: 0
@@ -249,7 +141,7 @@ MonoBehaviour:
     defaultState: 1
   tonemapper:
     overrideState: 1
-    value: 2
+    value: 0
   toneCurveToeStrength:
     overrideState: 0
     value: 0
@@ -277,36 +169,36 @@ MonoBehaviour:
     value: 1
   temperature:
     overrideState: 1
-    value: 0
+    value: -12
   tint:
     overrideState: 1
-    value: -5
+    value: 0
   colorFilter:
     overrideState: 1
-    value: {r: 0.9227838, g: 0.9622642, b: 0.8381986, a: 1}
+    value: {r: 0.46855342, g: 1, b: 0.72927016, a: 1}
   hueShift:
-    overrideState: 0
+    overrideState: 1
     value: 0
   saturation:
     overrideState: 1
-    value: -7
+    value: 75
   brightness:
     overrideState: 0
     value: 0
   postExposure:
-    overrideState: 0
-    value: 0.2
+    overrideState: 1
+    value: 0
   contrast:
-    overrideState: 0
+    overrideState: 1
     value: 0
   mixerRedOutRedIn:
-    overrideState: 0
+    overrideState: 1
     value: 100
   mixerRedOutGreenIn:
-    overrideState: 0
+    overrideState: 1
     value: 0
   mixerRedOutBlueIn:
-    overrideState: 0
+    overrideState: 1
     value: 0
   mixerGreenOutRedIn:
     overrideState: 0
@@ -1535,7 +1427,7 @@ MonoBehaviour:
       - 0.5
       - 0.5
       - 0.5
---- !u!114 &2208740841110973626
+--- !u!114 &4847711232211572830
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1544,44 +1436,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d65e486e4de6e5448a8fbb43dc8756a0, type: 3}
-  m_Name: Grain
-  m_EditorClassIdentifier: Unity.Postprocessing.Runtime::UnityEngine.Rendering.PostProcessing.Grain
+  m_Script: {fileID: 11500000, guid: b3f6f3f7c722b4544b97e3c75840aa33, type: 3}
+  m_Name: AutoExposure
+  m_EditorClassIdentifier: Unity.Postprocessing.Runtime::UnityEngine.Rendering.PostProcessing.AutoExposure
   active: 1
   enabled:
     overrideState: 1
     value: 1
-  colored:
+  filtering:
+    overrideState: 1
+    value: {x: 53.999992, y: 99}
+  minLuminance:
+    overrideState: 1
+    value: 0.1
+  maxLuminance:
+    overrideState: 1
+    value: 9
+  keyValue:
     overrideState: 1
     value: 1
-  intensity:
-    overrideState: 1
-    value: 0.088
-  size:
-    overrideState: 1
-    value: 2.58
-  lumContrib:
-    overrideState: 1
-    value: 0.948
---- !u!114 &6307279408373825655
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b94fcd11afffcb142908bfcb1e261fba, type: 3}
-  m_Name: MotionBlur
-  m_EditorClassIdentifier: Unity.Postprocessing.Runtime::UnityEngine.Rendering.PostProcessing.MotionBlur
-  active: 1
-  enabled:
-    overrideState: 1
+  eyeAdaptation:
+    overrideState: 0
+    value: 0
+  speedUp:
+    overrideState: 0
+    value: 2
+  speedDown:
+    overrideState: 0
     value: 1
-  shutterAngle:
-    overrideState: 1
-    value: 270
-  sampleCount:
-    overrideState: 1
-    value: 10

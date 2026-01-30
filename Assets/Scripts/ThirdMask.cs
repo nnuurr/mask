@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
-public class FirstMask : MonoBehaviour
+public class ThirdMask : MonoBehaviour
 {
     [SerializeField]
     public PostProcessVolume postProcessVolume;
@@ -11,7 +11,7 @@ public class FirstMask : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.N))
+        if (Input.GetKeyDown(KeyCode.B))
         {
             Activate(!IsActive);
         }
@@ -19,7 +19,7 @@ public class FirstMask : MonoBehaviour
 
     public void Activate(bool state)
     {
-        if (postProcessVolume != null) postProcessVolume.enabled = state;
+        if (postProcessVolume!=null) postProcessVolume.enabled = state;
         IsActive = state;
     }
 }

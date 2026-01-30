@@ -304,6 +304,10 @@ PrefabInstance:
       propertyPath: postProcessVolume
       value: 
       objectReference: {fileID: 1535117178}
+    - target: {fileID: 757464022157109130, guid: 35623dc3a7cc13948990522765ad018a, type: 3}
+      propertyPath: postProcessVolume
+      value: 
+      objectReference: {fileID: 1494755713}
     - target: {fileID: 3559995152094843101, guid: 35623dc3a7cc13948990522765ad018a, type: 3}
       propertyPath: directionalSource
       value: 
@@ -1861,6 +1865,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490131569}
   m_Mesh: {fileID: -7513297493162946847, guid: 77d3f1e5f190b4f4291b00db9652b829, type: 3}
+--- !u!114 &1494755713 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1934640374205370384, guid: 618eb8ec4dd456f4cbc9b47b4af32be4, type: 3}
+  m_PrefabInstance: {fileID: 218527764006044273}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Postprocessing.Runtime::UnityEngine.Rendering.PostProcessing.PostProcessVolume
 --- !u!1 &1522251491
 GameObject:
   m_ObjectHideFlags: 0
@@ -2281,6 +2296,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1985409714}
   m_Mesh: {fileID: -7783138957370662484, guid: 77d3f1e5f190b4f4291b00db9652b829, type: 3}
+--- !u!1001 &218527764006044273
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3744908629042556055, guid: 618eb8ec4dd456f4cbc9b47b4af32be4, type: 3}
+      propertyPath: m_Name
+      value: ThirdMaskEffectsVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 5136213991481395834, guid: 618eb8ec4dd456f4cbc9b47b4af32be4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 22.598932
+      objectReference: {fileID: 0}
+    - target: {fileID: 5136213991481395834, guid: 618eb8ec4dd456f4cbc9b47b4af32be4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.333864
+      objectReference: {fileID: 0}
+    - target: {fileID: 5136213991481395834, guid: 618eb8ec4dd456f4cbc9b47b4af32be4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 32.989918
+      objectReference: {fileID: 0}
+    - target: {fileID: 5136213991481395834, guid: 618eb8ec4dd456f4cbc9b47b4af32be4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5136213991481395834, guid: 618eb8ec4dd456f4cbc9b47b4af32be4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5136213991481395834, guid: 618eb8ec4dd456f4cbc9b47b4af32be4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5136213991481395834, guid: 618eb8ec4dd456f4cbc9b47b4af32be4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5136213991481395834, guid: 618eb8ec4dd456f4cbc9b47b4af32be4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5136213991481395834, guid: 618eb8ec4dd456f4cbc9b47b4af32be4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5136213991481395834, guid: 618eb8ec4dd456f4cbc9b47b4af32be4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 618eb8ec4dd456f4cbc9b47b4af32be4, type: 3}
 --- !u!1001 &787571800873544105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2495,6 +2567,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1131280060069920931, guid: 1ed1b1f6855e7e24cbacf89e230f8220, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7340715940461488820, guid: 1ed1b1f6855e7e24cbacf89e230f8220, type: 3}
       propertyPath: m_Name
       value: FirstMaskEffectsVolume
@@ -2517,3 +2593,4 @@ SceneRoots:
   - {fileID: 543083664}
   - {fileID: 7905248289530777172}
   - {fileID: 787571800873544105}
+  - {fileID: 218527764006044273}
