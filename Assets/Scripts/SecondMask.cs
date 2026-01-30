@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using UnityEngine;
 
 public class SecondMask : MonoBehaviour
@@ -23,5 +24,10 @@ public class SecondMask : MonoBehaviour
         if (localLightSource != null) localLightSource.enabled = state;
         if (directionalSource != null) directionalSource.enabled = !state;
         IsActive = state;
+    }
+
+    public bool GetIsActive()
+    {
+        return IsActive;
     }
 }

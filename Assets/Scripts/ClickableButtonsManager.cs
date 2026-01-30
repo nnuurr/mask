@@ -104,11 +104,16 @@ public class ClickableButtonsManager : MonoBehaviour
         }
     }
 
-    public void GetCurrButtin()
+    public int GetCurrButtonIndex()
     {
         for (int i = 0; i < numOfButtons; i++)
         {
-            
+            if(!clickedButtons[i])
+            {
+                return i;
+            }
         }
+
+        return numOfButtons-1;
     }
 }
