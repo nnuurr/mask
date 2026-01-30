@@ -4,23 +4,25 @@ using UnityEngine;
 public class Clickable : MonoBehaviour
 {
     [SerializeField]
-    private int clickCounter;
+    protected int clickCounter;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected ClickableType clickableType;
+
+    private void Awake()
     {
-        
+        clickCounter = 0;
+        clickableType = ClickableType.Interactable;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnMouseDown()
+    public virtual void OnMouseDown()
     {
         Debug.Log("Clickable object was clicked!");
         clickCounter++;
     }
+
+    public ClickableType GetClickableType()
+    {
+        return clickableType;
+    }
+
 }
