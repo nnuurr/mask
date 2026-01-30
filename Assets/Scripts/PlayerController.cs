@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.IO;
 using UnityEngine;
@@ -23,11 +24,15 @@ public class PlayerController : MonoBehaviour
     public Transform camera;
     public float xRotate = 0f, MaxTurn = 90f, MinTurn = -90f, mouseSens = 5f;
     #endregion
+
+    private CursorControl cursorControl;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        cursorControl = FindFirstObjectByType<CursorControl>();
     }
 
     private void OnMouse()
@@ -45,7 +50,31 @@ public class PlayerController : MonoBehaviour
     void Update() 
     {
         OnMouse();
+        CheckForInteractable();
     }
+
+    private void CheckForInteractable()
+    {
+        Vector2 screenPos = new Vector2(Screen.width / 2, Screen.height / 2); 
+        Ray ray = Camera.main.ScreenPointToRay(screenPos); 
+        if (Physics.Raycast(ray, out RaycastHit hit, 100f)) 
+        { 
+            Clickable clickable = hit.collider.GetComponent<Clickable>(); 
+            if (clickable != null) 
+            {
+                cursorControl.SetCursorTo(1);
+            }
+            else
+            {
+                cursorControl.SetCursorTo(0);
+            }
+        }
+        else 
+        {
+            cursorControl.SetCursorTo(0);
+        }
+    }
+
     void FixedUpdate()
     {
         ApplyVelocity();
