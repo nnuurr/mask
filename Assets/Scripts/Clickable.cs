@@ -14,6 +14,11 @@ public class Clickable : MonoBehaviour
         clickableType = ClickableType.Interactable;
     }
 
+    public void SetClickable(bool isClickable)
+    {
+        this.GetComponent<Collider>().enabled = isClickable;
+    }
+
     public virtual void Clicked()
     {
         Debug.Log("Clickable object was clicked!");

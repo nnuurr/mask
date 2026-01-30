@@ -41,5 +41,6 @@ public class OpenCloset : Clickable
     public override void Clicked()
     {
         isOpening = true;
+        SetClickable(false);
     }
 }
