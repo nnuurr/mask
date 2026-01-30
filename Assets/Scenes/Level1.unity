@@ -498,7 +498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   clickCounter: 0
-  buttonNumber: 1
+  buttonNumber: 4
 --- !u!136 &1249344563
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1054,7 +1054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   clickCounter: 0
-  buttonNumber: 0
+  buttonNumber: 3
 --- !u!136 &2138229838
 CapsuleCollider:
   m_ObjectHideFlags: 0

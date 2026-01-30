@@ -23,10 +23,11 @@ public class ClickableButtonsManager : MonoBehaviour
 
     [SerializeField]
     private bool didFinish = false;
+    private int numOfButtons =0;
 
     public void Start()
     {
-        int numOfButtons = GetComponentsInChildren<ClickableButton>().Count();
+        numOfButtons = GetComponentsInChildren<ClickableButton>().Count();
         clickedButtons = new bool[numOfButtons];
 
         didFinish = false;
@@ -100,6 +101,14 @@ public class ClickableButtonsManager : MonoBehaviour
         {
             audioSource.clip = clip;
             audioSource.Play();
+        }
+    }
+
+    public void GetCurrButtin()
+    {
+        for (int i = 0; i < numOfButtons; i++)
+        {
+            
         }
     }
 }
