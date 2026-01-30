@@ -3,6 +3,7 @@ using UnityEngine;
 public class Throwable : MonoBehaviour
 {
     [SerializeField] private Transform playerTrans;
+    [SerializeField] private Animator breakMaskAnim;
     private Rigidbody rb;
     private Draggable draggable;
 
@@ -20,6 +21,10 @@ public class Throwable : MonoBehaviour
     {
         if(draggable.IsDragging())
         {
+            if(breakMaskAnim != null)
+            {
+                breakMaskAnim.SetBool("break", true);
+            }
             pickedUp = true;
         }
         else if(pickedUp)
