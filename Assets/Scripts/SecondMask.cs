@@ -9,6 +9,9 @@ public class SecondMask : MonoBehaviour
     private Light directionalSource;
 
     [SerializeField]
+    private GameObject floatingEyes;
+
+    [SerializeField]
     private bool IsActive = false;
 
     public void Update()
@@ -23,6 +26,7 @@ public class SecondMask : MonoBehaviour
     {
         if (localLightSource != null) localLightSource.enabled = state;
         if (directionalSource != null) directionalSource.enabled = !state;
+        if (floatingEyes != null) floatingEyes.SetActive(state);
         IsActive = state;
     }
 
