@@ -116,4 +116,9 @@ public class ClickableButtonsManager : MonoBehaviour
 
         return numOfButtons-1;
     }
+
+    public bool GetDidFinish()
+    {
+        return didFinish;
+    }
 }
