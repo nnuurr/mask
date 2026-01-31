@@ -874,24 +874,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Postprocessing.Runtime::UnityEngine.Rendering.PostProcessing.PostProcessVolume
---- !u!1 &1681663347 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7662027520744572102, guid: 25e1d25441fe72145aa4fbe10ed3320f, type: 3}
-  m_PrefabInstance: {fileID: 5687266108162577847}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1681663352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1681663347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9d9109be4b682a408b9f181e5ea6f2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LoadNextLevel
-  nextScene: 2
 --- !u!114 &1714992477 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3559995152094843101, guid: 35623dc3a7cc13948990522765ad018a, type: 3}
@@ -1559,10 +1541,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7662027520744572102, guid: 25e1d25441fe72145aa4fbe10ed3320f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1681663352}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 25e1d25441fe72145aa4fbe10ed3320f, type: 3}
 --- !u!136 &5754133245399552655
 CapsuleCollider:
