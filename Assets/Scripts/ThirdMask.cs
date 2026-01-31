@@ -11,10 +11,6 @@ public class ThirdMask : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            Activate(!IsActive);
-        }
     }
 
     public void Activate(bool state)

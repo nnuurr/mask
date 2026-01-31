@@ -12,10 +12,7 @@ public class FirstMask : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            Activate(!IsActive);
-        }
+        
     }
 
     public void Activate(bool state)

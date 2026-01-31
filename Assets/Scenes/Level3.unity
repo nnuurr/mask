@@ -124,6 +124,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1627974901425646471, guid: 047426fbbaf8be24da8cbd3a2f8c1ba2, type: 3}
   m_PrefabInstance: {fileID: 2025887646}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &197357685 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1075081322079693510, guid: 047426fbbaf8be24da8cbd3a2f8c1ba2, type: 3}
+  m_PrefabInstance: {fileID: 2025887646}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0d5bfece9575cb45b7116ee3d3d5ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EndLevel
 --- !u!1001 &217417609
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -132,6 +143,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 245585324122863911, guid: 2baa9e417d08b8a41bd4f9ef51ad5d72, type: 3}
+      propertyPath: onSensorTriggered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 245585324122863911, guid: 2baa9e417d08b8a41bd4f9ef51ad5d72, type: 3}
+      propertyPath: onSensorTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 245585324122863911, guid: 2baa9e417d08b8a41bd4f9ef51ad5d72, type: 3}
+      propertyPath: onSensorTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 662194127}
+    - target: {fileID: 245585324122863911, guid: 2baa9e417d08b8a41bd4f9ef51ad5d72, type: 3}
+      propertyPath: onSensorTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 245585324122863911, guid: 2baa9e417d08b8a41bd4f9ef51ad5d72, type: 3}
+      propertyPath: onSensorTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Counter
+      objectReference: {fileID: 0}
+    - target: {fileID: 245585324122863911, guid: 2baa9e417d08b8a41bd4f9ef51ad5d72, type: 3}
+      propertyPath: onSensorTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ThirdPuzzle, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 245585324122863911, guid: 2baa9e417d08b8a41bd4f9ef51ad5d72, type: 3}
+      propertyPath: onSensorTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8065763976822904367, guid: 2baa9e417d08b8a41bd4f9ef51ad5d72, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.843457
@@ -268,6 +307,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 245585324122863911, guid: 2baa9e417d08b8a41bd4f9ef51ad5d72, type: 3}
+      propertyPath: onSensorTriggered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 245585324122863911, guid: 2baa9e417d08b8a41bd4f9ef51ad5d72, type: 3}
+      propertyPath: onSensorTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 245585324122863911, guid: 2baa9e417d08b8a41bd4f9ef51ad5d72, type: 3}
+      propertyPath: onSensorTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 662194127}
+    - target: {fileID: 245585324122863911, guid: 2baa9e417d08b8a41bd4f9ef51ad5d72, type: 3}
+      propertyPath: onSensorTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 245585324122863911, guid: 2baa9e417d08b8a41bd4f9ef51ad5d72, type: 3}
+      propertyPath: onSensorTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Counter
+      objectReference: {fileID: 0}
+    - target: {fileID: 245585324122863911, guid: 2baa9e417d08b8a41bd4f9ef51ad5d72, type: 3}
+      propertyPath: onSensorTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ThirdPuzzle, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 245585324122863911, guid: 2baa9e417d08b8a41bd4f9ef51ad5d72, type: 3}
+      propertyPath: onSensorTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8065763976822904367, guid: 2baa9e417d08b8a41bd4f9ef51ad5d72, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.531236
@@ -317,6 +384,51 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2baa9e417d08b8a41bd4f9ef51ad5d72, type: 3}
+--- !u!1 &662194126
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 662194128}
+  - component: {fileID: 662194127}
+  m_Layer: 0
+  m_Name: puzzle3Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &662194127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662194126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8941ed06a79f95045bf17830629eb44e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ThirdPuzzle
+  door: {fileID: 197357685}
+--- !u!4 &662194128
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662194126}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &684408020 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 757464022157109130, guid: 35623dc3a7cc13948990522765ad018a, type: 3}
@@ -615,6 +727,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 245585324122863911, guid: 2baa9e417d08b8a41bd4f9ef51ad5d72, type: 3}
+      propertyPath: onSensorTriggered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 245585324122863911, guid: 2baa9e417d08b8a41bd4f9ef51ad5d72, type: 3}
+      propertyPath: onSensorTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 245585324122863911, guid: 2baa9e417d08b8a41bd4f9ef51ad5d72, type: 3}
+      propertyPath: onSensorTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 662194127}
+    - target: {fileID: 245585324122863911, guid: 2baa9e417d08b8a41bd4f9ef51ad5d72, type: 3}
+      propertyPath: onSensorTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 245585324122863911, guid: 2baa9e417d08b8a41bd4f9ef51ad5d72, type: 3}
+      propertyPath: onSensorTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Counter
+      objectReference: {fileID: 0}
+    - target: {fileID: 245585324122863911, guid: 2baa9e417d08b8a41bd4f9ef51ad5d72, type: 3}
+      propertyPath: onSensorTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ThirdPuzzle, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 245585324122863911, guid: 2baa9e417d08b8a41bd4f9ef51ad5d72, type: 3}
+      propertyPath: onSensorTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8065763976822904367, guid: 2baa9e417d08b8a41bd4f9ef51ad5d72, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.560432
@@ -1352,6 +1492,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4173847595695035984, guid: 047426fbbaf8be24da8cbd3a2f8c1ba2, type: 3}
+      propertyPath: nextScene
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4377764863408809671, guid: 047426fbbaf8be24da8cbd3a2f8c1ba2, type: 3}
       propertyPath: m_Name
       value: theroom 1
@@ -1467,3 +1611,4 @@ SceneRoots:
   - {fileID: 217417609}
   - {fileID: 637083457}
   - {fileID: 1433042430}
+  - {fileID: 662194128}
