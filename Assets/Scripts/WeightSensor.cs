@@ -12,5 +12,5 @@ public class WeightSensor : MonoBehaviour
     {
         Debug.Log($"Weight Sensor Activated by {src.name}");
         onSensorTriggered.Invoke();
-    }    
+    }   
 }
