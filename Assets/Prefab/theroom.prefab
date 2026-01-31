@@ -2500,6 +2500,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -4864696145119574775, guid: c84e863f089d0eb45a461e4b76b3fbbe, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e48834018d6f6bf4fbe56c4e22b3253c, type: 2}
     - target: {fileID: 919132149155446097, guid: c84e863f089d0eb45a461e4b76b3fbbe, type: 3}
       propertyPath: m_Name
       value: parabed
