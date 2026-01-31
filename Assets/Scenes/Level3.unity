@@ -1500,10 +1500,18 @@ PrefabInstance:
       propertyPath: nextScene
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4281681510509146857, guid: 047426fbbaf8be24da8cbd3a2f8c1ba2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 769b51f9819b7674b923342d27cb5340, type: 2}
     - target: {fileID: 4377764863408809671, guid: 047426fbbaf8be24da8cbd3a2f8c1ba2, type: 3}
       propertyPath: m_Name
       value: theroom 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8212691459137380763, guid: 047426fbbaf8be24da8cbd3a2f8c1ba2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 769b51f9819b7674b923342d27cb5340, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

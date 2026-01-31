@@ -3,6 +3,7 @@ using UnityEngine;
 public class ParanoiaObjects : MonoBehaviour
 {
     [SerializeField] private GameObject obj;
+    [SerializeField] private FirstMask fMask;
     private BoxCollider bColl;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,7 +21,7 @@ public class ParanoiaObjects : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("MainCamera"))
+        if(other.gameObject.CompareTag("MainCamera") && fMask.GetIsActive())
         {
             obj.SetActive(!obj.activeSelf);
         }   

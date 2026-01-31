@@ -439,7 +439,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8065763976822904367, guid: 2baa9e417d08b8a41bd4f9ef51ad5d72, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.52
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 8065763976822904367, guid: 2baa9e417d08b8a41bd4f9ef51ad5d72, type: 3}
       propertyPath: m_LocalPosition.y
@@ -683,6 +683,10 @@ PrefabInstance:
       propertyPath: obj
       value: 
       objectReference: {fileID: 1209177170}
+    - target: {fileID: 7153512277294762594, guid: bff443fdac7fff247a48a0f511c52946, type: 3}
+      propertyPath: fMask
+      value: 
+      objectReference: {fileID: 187102406}
     - target: {fileID: 7354641704262057912, guid: bff443fdac7fff247a48a0f511c52946, type: 3}
       propertyPath: m_LocalPosition.x
       value: -29.58
@@ -986,6 +990,10 @@ PrefabInstance:
       propertyPath: obj
       value: 
       objectReference: {fileID: 889718975}
+    - target: {fileID: 7153512277294762594, guid: bff443fdac7fff247a48a0f511c52946, type: 3}
+      propertyPath: fMask
+      value: 
+      objectReference: {fileID: 187102406}
     - target: {fileID: 7354641704262057912, guid: bff443fdac7fff247a48a0f511c52946, type: 3}
       propertyPath: m_LocalPosition.x
       value: -29.58
@@ -1220,6 +1228,10 @@ PrefabInstance:
       propertyPath: obj
       value: 
       objectReference: {fileID: 1875214768}
+    - target: {fileID: 7153512277294762594, guid: bff443fdac7fff247a48a0f511c52946, type: 3}
+      propertyPath: fMask
+      value: 
+      objectReference: {fileID: 187102406}
     - target: {fileID: 7354641704262057912, guid: bff443fdac7fff247a48a0f511c52946, type: 3}
       propertyPath: m_LocalPosition.x
       value: -23.80885
@@ -1326,10 +1338,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4281681510509146857, guid: 047426fbbaf8be24da8cbd3a2f8c1ba2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 769b51f9819b7674b923342d27cb5340, type: 2}
     - target: {fileID: 4377764863408809671, guid: 047426fbbaf8be24da8cbd3a2f8c1ba2, type: 3}
       propertyPath: m_Name
       value: theroom 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8212691459137380763, guid: 047426fbbaf8be24da8cbd3a2f8c1ba2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 769b51f9819b7674b923342d27cb5340, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
